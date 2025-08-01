@@ -10,11 +10,6 @@ class LogoutResponse extends BaseLogoutResponse
 {
     public function toResponse($request): RedirectResponse
     {
-        if (Filament::getCurrentPanel()->getId() === 'admin') {
-            dd(Filament::getLoginUrl());
-            return redirect()->to(Filament::getLoginUrl());
-        }
-
-        return parent::toResponse($request);
+        return redirect()->to(Filament::getLoginUrl());
     }
 }
