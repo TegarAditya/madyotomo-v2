@@ -3,6 +3,8 @@
 namespace App\Providers\Filament;
 
 use App\Http\Middleware\RedirectToProperPanelMiddleware;
+use Awcodes\LightSwitch\Enums\Alignment;
+use Awcodes\LightSwitch\LightSwitchPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -54,6 +56,10 @@ class AuthPanelProvider extends PanelProvider
             ->authMiddleware([
                 RedirectToProperPanelMiddleware::class,
                 Authenticate::class,
+            ])
+            ->plugins([
+                LightSwitchPlugin::make()
+                    ->position(Alignment::TopCenter),
             ]);
     }
 }
