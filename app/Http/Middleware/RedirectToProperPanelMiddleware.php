@@ -19,7 +19,7 @@ class RedirectToProperPanelMiddleware
         if (Auth::check() && Auth::user()->hasRole('super_admin')) {
             return redirect()->to(Dashboard::getUrl(panel: 'admin'));
         }
-        
+
         return $next($request);
     }
 }
