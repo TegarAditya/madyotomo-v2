@@ -29,6 +29,7 @@ class AuthPanelProvider extends PanelProvider
             ->id('auth')
             ->path('')
             ->login()
+            ->brandName('Madyotomo+')
             ->colors([
                 'primary' => Color::Amber,
             ])
