@@ -6,7 +6,7 @@ use Filament\Widgets\ChartWidget;
 
 class SampleBarChart extends ChartWidget
 {
-    protected static ?string $heading = 'Bar Chart';
+    protected ?string $heading = 'Bar Chart';
 
     protected function getData(): array
     {
