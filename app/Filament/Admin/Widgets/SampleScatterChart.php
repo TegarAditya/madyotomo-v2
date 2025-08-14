@@ -6,7 +6,7 @@ use Filament\Widgets\ChartWidget;
 
 class SampleScatterChart extends ChartWidget
 {
-    protected static ?string $heading = 'Line Chart';
+    protected ?string $heading = 'Line Chart';
 
     protected function getData(): array
     {

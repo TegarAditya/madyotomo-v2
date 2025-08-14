@@ -1,3 +1,6 @@
 @import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import '../../../../vendor/pxlrbt/filament-activity-log/resources/css/styles.css';
 
-@config 'tailwind.config.js';
+@source '../../../../app/Filament/Admin/**/*';
+@source '../../../../resources/views/filament/admin/**/*';
+@source '../../../../vendor/cmsmaxinc/filament-error-pages/resources/**/*.blade.php';
