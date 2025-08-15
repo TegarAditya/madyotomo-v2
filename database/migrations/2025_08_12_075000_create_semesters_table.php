@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('semesters', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->index();
+            $table->string('name');
+            $table->string('type');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->userAuditable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
